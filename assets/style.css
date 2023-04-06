@@ -66,6 +66,10 @@ button:hover{
     background-color: rgba(35, 125, 189, 0.105);
 }
 
+button:hover:active {
+    background-color: rgba(35, 125, 189, 0.105);
+  }  
+
 footer {
     position: absolute;
     bottom: 60px;
@@ -83,4 +87,3 @@ footer {
     text-decoration: underline;
     color:#ffffff;
   }
-  
