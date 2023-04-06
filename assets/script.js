@@ -124,3 +124,23 @@ decimal.addEventListener('click', (event) => {
   inputDecimal(event.target.value);
   updateScreen(currentNumber);
 });
+
+// Menambahkan event listener untuk menangani input dari keyboard
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (/[0-9]/.test(key)) {
+    inputNumber(key);
+    updateScreen(currentNumber);
+  } else if (/[+\-*/]/.test(key)) {
+    inputOperator(key);
+  } else if (key === '.' || key === ',') {
+    inputDecimal('.');
+    updateScreen(currentNumber);
+  } else if (key === 'Backspace') {
+    deleteLastChar();
+  } else if (key === 'Escape') {
+    clearAll();
+  } else if (key === 'Enter') {
+    calculate();
+  }
+});
